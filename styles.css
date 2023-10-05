@@ -1,0 +1,278 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: fixed;
+    background: rgb(14,156,142);
+    background: linear-gradient(170deg, rgba(14,156,142,1) 13%, rgba(41,121,9,1) 64%, rgba(138,6,181,0.6783088235294117) 100%);
+}
+header {
+    color: #fff;
+    border-bottom: solid white;   
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 10px 0;
+    width: 100%;
+}
+nav h1{
+    margin-left: 1rem;
+}
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    display: block;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00bcd4;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    display: none;
+    flex-direction: column;
+    background-color: rgb(246, 246, 211, 0.5);
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-toggle:checked ~ .nav-links {
+    display: flex;
+}
+
+.menu-icon.active::before,
+.menu-icon.active::after {
+    color: #00bcd4;
+}
+
+.aboutMe {
+    display: grid;
+    color: white;
+    text-align: center;
+    grid-template-areas: 
+        "about"
+        "img"
+        "intro"
+        "skill";
+}
+
+.aboutMe > h2 {
+    grid-area: about;   
+}
+
+.aboutMe > img {
+    grid-area: img;
+    width: 10rem;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.aboutMe > p {
+    grid-area: intro;
+    text-align: justify;
+    margin: 5px;
+    border: 2px solid white;
+    background-color: rgb(246, 246, 211, 0.5);
+    padding: 2rem;
+    border-radius: 5px;
+} 
+.skills{
+    grid-area: skill;
+    margin: 1rem 5px;
+    border-radius: 5px;
+    border: 1px solid whitesmoke;
+}
+.skillset > div {
+    background-color: rgb(246, 246, 211, 0.5);
+    border: 1px solid whitesmoke;
+}
+
+.portfolio {
+    margin: 1rem 5px;
+    border-radius: 5px;
+    border: 1px solid whitesmoke; 
+    color: white;  
+    text-align: center;
+}
+
+.portfolio1 div{
+    background-color: rgb(246, 246, 211, 0.5);
+    border: 1px solid whitesmoke;
+    padding: 10px 0;
+}
+
+.portfolio1 img {
+    width: 15rem;
+    height: 10rem;
+}
+
+
+.contact{
+    background-color: rgb(246, 246, 211, 0.5);
+    border: 1px solid whitesmoke;
+    margin: 1rem 5px;
+}
+.contact h2{
+    color: white;
+    text-align: center;
+}
+.contact div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact img {
+    width: 2rem;
+    border-radius: 50%;
+}
+
+form {
+    border: solid 2px;
+    border-radius: 5px;
+    background-color: #fff;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+form label{
+    display: block;
+}
+form input{
+    width: 90%;
+    margin-bottom: 5px;
+}
+form .txtMessage{
+    height: 3rem;
+}
+form .submit{
+    background-color: rgba(83, 235, 255, 0.701);
+    width: 50%;
+    margin: 1rem auto;
+}
+footer {
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+ @media (min-width:767px) {
+    nav {
+        width: 768px;
+        display: flex;
+    }
+    nav .menu-icon {
+        display: none;
+    }
+    .nav-links {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        position:inherit;
+        flex-direction: row;
+        background-color: transparent;
+    }
+    .aboutMe {
+        display: grid;
+        grid-template-areas: 
+             "about about"
+             "img intro"
+             "skill skill";
+    }
+    .aboutMe > img {
+        margin: 10px 10px;
+        width: 20rem;
+    }
+    .skillset{
+        display: flex;
+        justify-content: space-around;
+    }
+    .skillset div {
+        width: 30%;
+        text-align: left;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    
+    
+    .portfolio img {
+        width: 20rem;
+        height: 15rem;
+    }
+    .contact{
+        display: flex;
+
+    }
+    .contact h2 {
+        margin: 2rem auto;
+    }
+    .contact .contact_icon {
+        position: absolute;
+        margin-left: 90px;
+        margin-top: 70px;
+    }
+    .contact img {
+        width: 3rem;
+        border-radius: 50%;
+    }
+ } 
+
+ @media (min-width:1023px){
+    .portfolio1{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 30px;
+    }
+    nav {
+        width: 100%;
+        display: flex;
+    }
+
+    .aboutMe {
+        display: grid;
+        grid-template-columns: 50%;
+        grid-template-areas: 
+             "about about"
+             "img intro"
+             "skill intro";
+    }
+    .aboutMe > img{
+        margin: auto;
+    }
+    .contact .contact_icon {
+        position: absolute;
+        margin-left: 150px;
+        margin-top: 70px;
+    }
+    form {
+        margin: 0 auto;
+        width: 50%;
+    }
+ }
+

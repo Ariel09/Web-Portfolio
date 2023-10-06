@@ -93,14 +93,17 @@ nav h1{
     margin: 0 auto;
 }
 
-.aboutMe > p {
+.introDiv {
     grid-area: intro;
-    text-align: justify;
     margin: 5px;
     border: 2px solid white;
     background-color: rgb(246, 246, 211, 0.5);
     padding: 2rem;
     border-radius: 5px;
+}
+.introDiv > p {
+    text-align: justify;
+    
 } 
 .skills{
     grid-area: skill;

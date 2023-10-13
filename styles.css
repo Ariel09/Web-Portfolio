@@ -83,7 +83,8 @@ nav h1{
 }
 
 .aboutMe > h2 {
-    grid-area: about;   
+    grid-area: about;  
+    font-size: 2rem; 
 }
 
 .aboutMe > img {
@@ -129,6 +130,8 @@ nav h1{
     color: white;  
     text-align: center;
 }
+
+
 
 .portfolio1 div{
     background-color: rgb(246, 246, 211, 0.5);
@@ -215,6 +218,9 @@ footer {
              "img intro"
              "skill skill";
     }
+    .aboutMe > h2 {
+        font-size: 3rem;
+    }
     .aboutMe > img {
         margin: 10px 10px;
         width: 20rem;
@@ -254,10 +260,19 @@ footer {
  } 
 
  @media (min-width:1023px){
+    .aboutMe > h2{
+        font-size: 10rem;
+    }
+    .skills h2{
+        font-size: 2rem;
+    }
     .portfolio1{
         display: flex;
         justify-content: space-around;
         margin-bottom: 30px;
+    }
+    .portfolio h2{
+        font-size: 2rem;
     }
     nav {
         width: 100%;
